@@ -15,6 +15,6 @@ int main(void)
     cin>>start.x>>start.y;
     cout<<"Enter X and Y co-ordinate of Second Point: "<<endl;
     cin>>end.x>>end.y;
-    cout<<"Euclidian Distance Between:"<<sqrt(abs((end.x - start.y)^2) + (abs(end.y - start.x)^2));
+    cout<<"Euclidian Distance Between Ponits:"<<sqrt(abs((end.x - start.y)^2) + (abs(end.y - start.x)^2));
     return 0;
 }
