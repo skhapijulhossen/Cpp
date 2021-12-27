@@ -4,24 +4,19 @@
 
 void SelectionSort(int array[], int len)
 {
-    int iter = 0, min_index;
+    int iter = 0;
     while (iter < len)
     {
-        min_index = iter;
         for (int index = iter + 1; index < len; index++)
         {
-            if (array[min_index] > array[index])
+            if (array[index] < array[iter])
             {
-                min_index = index;
+                int temp;
+                temp = array[iter];
+                array[iter] = array[index];
+                array[index] = temp;
             }
         }
-        int temp;
-        temp = array[iter];
-        array[iter] = array[min_index];
-        array[min_index] = temp;
-        // array[iter] = array[iter] + array[min_index];
-        // array[min_index] = array[iter] - array[min_index];
-        // array[iter] = array[iter] - array[min_index];
         iter++;
     }
 }
